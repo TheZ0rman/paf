@@ -1,0 +1,268 @@
+body {
+    background-color: #000;
+    color: #d4af37;
+    font-family: 'Garamond', serif;
+}
+
+.container {
+    margin-top: 50px;
+    text-align: center;
+}
+
+h1, h2 {
+    margin-bottom: 20px;
+}
+
+.interactive-section {
+    margin-top: 30px;
+}
+
+.button-group {
+    margin-top: 30px;
+}
+
+.btn-custom {
+    color: #d4af37;
+    background-color: #000;
+    border: 2px solid #d4af37;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.btn-custom:hover {
+    color: #000;
+    background-color: #d4af37;
+}
+
+/* Diseño del texto "Mis 15" centrado verticalmente */
+.highlight-container {
+    background: linear-gradient(to right, #d4af37, transparent);
+    padding: 20px 0;
+    text-align: center;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.highlight-text {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    background: linear-gradient(90deg, #000, #d4af37);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    animation: gradientShift 5s infinite alternate;
+}
+
+/* Animación para mover el degradado */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.location-component {
+    margin-top: 30px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.rounded-oval {
+    border-radius: 50%; /* Esto hará que la imagen tenga forma ovalada */
+    max-width: 55%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+.small-image {
+    margin-top: 10px; /* Espacio entre las imágenes */
+    width: 60%; /* Ajusta el tamaño de la imagen más pequeña */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.rounded-ova {
+    border-radius: 20%; /* Esto hará que la imagen tenga forma ovalada */
+    max-width: 40%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+
+
+@media (max-width: 576px) {
+    .sliding-image {
+        width: 100px; /* Reducir el tamaño de las imágenes para dispositivos móviles */
+    }
+    h1 {
+        font-size: 2em;
+    }
+
+    .btn-custom {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .col-md-4 {
+        margin-bottom: 15px;
+    }
+
+    .highlight-text {
+        font-size: 2em;
+    }
+}
+.song-component {
+    text-align: center; /* Centrar el contenido del componente */
+}
+
+.song-component audio {
+    margin-top: 10px; /* Espacio entre el texto y el reproductor de audio */
+}
+
+/* Estilo para el botón de regresar */
+#back-to-top {
+    position: fixed;
+    bottom: 20px; /* Ajusta la posición inferior */
+    right: 20px; /* Ajusta la posición derecha */
+    display: none; /* Oculto por defecto */
+    width: 50px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    border-radius: 50%; /* Botón circular */
+    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+
+}
+
+
+/* Estilo para el botón al hacer hover */
+#back-to-top:hover {
+    background-color: #d4af37; /* Color al pasar el mouse */
+    color: #000000; /* Color del texto al pasar el mouse */
+}
+
+.special-song-component {
+    background-color: rgba(212, 175, 55, 0.3); /* Fondo dorado con transparencia */
+    border: 1px solid #d4af37; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 30px 0; /* Margen superior e inferior */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+}
+.sliding-images-component {
+    overflow: hidden; /* Esconde el desbordamiento */
+    background-color: rgba(212, 175, 55, 0.1); /* Color de fondo */
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* Necesario para el posicionamiento absoluto de las imágenes */
+}
+
+.sliding-images {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    width: max-content;
+    animation: slide 30s linear infinite; /* Aumentar la duración de la animación */
+}
+
+.sliding-image {
+    width: 150px; /* Ajusta el tamaño de las imágenes según lo que necesites */
+    height: auto; /* Mantiene la proporción */
+    margin-right: 20px; /* Espacio entre las imágenes */
+}
+
+/* Repetir las imágenes para el efecto de deslizamiento infinito */
+.sliding-images::after {
+    content: "";
+    flex: 0 0 150px; /* Espacio para que el efecto de deslizamiento no se interrumpa */
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%); /* Comienza fuera de la pantalla a la derecha */
+    }
+    100% {
+        transform: translateX(-50%); /* Termina fuera de la pantalla a la izquierda */
+    }
+}
+
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+    background-color: rgba(212, 175, 55, 0.3);
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.countdown-element {
+    text-align: center;
+    color: #d4af37;
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+.countdown-element span {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.countdown-element p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+@media (max-width: 576px) {
+    .countdown-element span {
+        font-size: 1.5em;
+    }
+
+    .countdown-element p {
+        font-size: 0.9em;
+    }
+}
+.countdown-component {
+    margin-top: 30px;
+    background-color: rgba(212, 175, 55, 0.1);
+    border: 1px solid #d4af37;
+    border-radius: 10px;
+    padding: 20px;
+}
+.welcome-component {
+    background-color: rgba(212, 175, 55, 0.1); /* Fondo dorado translúcido */
+    border: 1px solid #d4af37; /* Borde dorado */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin: 20px; /* Margen alrededor para evitar que choque con los bordes */
+    text-align: center; /* Centrar el texto */
+    color: #d4af37; /* Color del texto dorado */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación */
+}
+
+.welcome-component h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.welcome-component p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+
+
